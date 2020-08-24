@@ -1,0 +1,64 @@
+{
+  "name": "menuext-example",
+  "description": "Preaction CMS Menu Extension Example",
+  "author": "Doug Elkin <doug@dougelkin.com>",
+  "LICENSE": "MIT",
+  "version": "0.0.0-alpha.0",
+  "private": true,
+  "main": "dist/preactioncms-menuext-example.cjs.js",
+  "module": "dist/preactioncms-menuext-example.esm.js",
+  "files": [
+    "dist/*",
+    "src/*",
+    "public/*"
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.11.4",
+    "@babel/preset-env": "^7.11.0",
+    "@preaction/bootstrap-clips": "^3.0.0-alpha.8",
+    "@rollup/plugin-babel": "^5.2.0",
+    "@rollup/plugin-commonjs": "^15.0.0",
+    "@rollup/plugin-node-resolve": "^9.0.0",
+    "@rollup/plugin-sucrase": "^3.1.0",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "bootstrap": "^4.5.2",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "prettier": "^2.0.5",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-scripts": "3.4.3",
+    "rollup": "^2.26.5",
+    "rollup-plugin-peer-deps-external": "^2.2.3",
+    "rollup-plugin-postcss": "^3.1.5",
+    "rollup-plugin-visualizer": "^4.1.0"
+  },
+  "peerDependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "rollup -c",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "plugin:prettier/recommended",
+      "plugin:react/recommended"
+    ]
+  },
+  "browserslist": {
+    "production": "defaults and supports es6-module",
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "dependencies": {}
+}
