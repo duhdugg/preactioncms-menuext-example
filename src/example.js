@@ -1,12 +1,20 @@
 function example(preaction) {
   return {
-    name: `Current Page: ${
-      preaction.page && preaction.page.title ? preaction.page.title : undefined
-    }`,
-    href: '//wikipedia.com',
+    name:
+      preaction.page && preaction.page.title
+        ? `Search Wikipedia: ${preaction.page.title}`
+        : 'Wikipedia',
+    href: 'https://en.wikipedia.com',
     onClick: (event) => {
-      event.preventDefault()
-      window.open('//wikipedia.com', '_blank', 'noopener,noreferrer')
+      if (preaction.page && preaction.page.title) {
+        event.preventDefault()
+        window.open(
+          'https://en.wikipedia.org/w/index.php?search=' +
+            encodeURIComponent(preaction.page.title),
+          '_blank',
+          'noopener,noreferrer'
+        )
+      }
     },
     order: 20,
   }
